@@ -24,9 +24,15 @@ export function Differentials() {
           {DIFFERENTIALS.map((item, index) => (
             <Reveal key={item.title} delay={(index % 3) * 0.08} className="h-full">
               <article className="group h-full bg-bone-100 p-8 transition-colors duration-500 hover:bg-bone-200 dark:bg-ink-950 dark:hover:bg-ink-900">
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-sm border border-navy-800/20 bg-navy-800/[0.06] transition-all duration-500 group-hover:border-navy-800/40 group-hover:bg-navy-800/10 dark:border-navy-300/25 dark:bg-navy-300/10 dark:group-hover:border-navy-300/60 dark:group-hover:bg-navy-300/20">
-                  <item.icon className="h-5 w-5 text-navy-800 dark:text-navy-300" aria-hidden="true" />
-                </span>
+                <item.icon
+                  className="h-6 w-6 text-navy-800 dark:text-navy-300"
+                  strokeWidth={1.5}
+                  aria-hidden="true"
+                />
+                <span
+                  className="mt-4 block h-px w-8 bg-navy-800/30 transition-all duration-500 group-hover:w-14 dark:bg-navy-300/40"
+                  aria-hidden="true"
+                />
                 <h3 className="mt-6 font-serif text-xl font-medium text-ink-900 dark:text-white">
                   {item.title}
                 </h3>

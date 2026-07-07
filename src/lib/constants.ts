@@ -71,13 +71,15 @@ export const WHATSAPP_LINK = `https://wa.me/${SITE.whatsapp}?text=${WHATSAPP_MES
 export interface NavLink {
   label: string;
   href: string;
+  /** Rótulo curto para a barra de navegação (desktop), onde o espaço é escasso. */
+  short?: string;
 }
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "O Escritório", href: "#sobre" },
-  { label: "Áreas de Atuação", href: "#areas-de-atuacao" },
+  { label: "O Escritório", href: "#sobre", short: "Escritório" },
+  { label: "Áreas de Atuação", href: "#areas-de-atuacao", short: "Atuação" },
   { label: "Diferenciais", href: "#diferenciais" },
-  { label: "Como Funciona", href: "#como-funciona" },
+  { label: "Como Funciona", href: "#como-funciona", short: "Processo" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "Dúvidas", href: "#faq" },
   { label: "Contato", href: "#contato" },
