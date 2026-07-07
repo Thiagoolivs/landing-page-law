@@ -60,6 +60,6 @@ Para ativar:
 2. No GitHub, em **Settings → Secrets and variables → Actions**, adicione:
    - Secret `RAILWAY_TOKEN` — o token do projeto/serviço no Railway.
    - Variable `RAILWAY_SERVICE_NAME` (opcional) — necessária apenas se o projeto tiver mais de um serviço.
-3. Sem o secret `RAILWAY_TOKEN` configurado, o job de deploy é pulado automaticamente (o CI continua funcionando normalmente).
+3. Sem o secret `RAILWAY_TOKEN` configurado, o step de deploy detecta a ausência do token e encerra sem erro (o CI continua funcionando normalmente).
 
 O arquivo `railway.json` define o build (Nixpacks, detecta Next.js automaticamente) e o comando de start (`npm run start`, respeitando a variável `PORT` do Railway).
