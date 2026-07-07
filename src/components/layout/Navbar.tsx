@@ -33,7 +33,7 @@ export function Navbar() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
         scrolled || menuOpen
-          ? "border-b border-white/10 bg-ink-950/90 shadow-lg shadow-black/10 backdrop-blur-xl"
+          ? "border-b border-ink-200 bg-bone/90 shadow-lg shadow-ink-950/5 backdrop-blur-xl dark:border-white/10 dark:bg-ink-950/90 dark:shadow-black/10"
           : "bg-transparent"
       )}
     >
@@ -47,11 +47,11 @@ export function Navbar() {
           aria-label={`${SITE.name} — voltar ao início`}
         >
           <Scale
-            className="h-7 w-7 text-navy-300 transition-transform duration-500 group-hover:rotate-[8deg]"
+            className="h-7 w-7 text-navy-700 transition-transform duration-500 group-hover:rotate-[8deg] dark:text-navy-300"
             aria-hidden="true"
           />
-          <span className="font-serif text-xl font-semibold tracking-wide text-white sm:text-2xl">
-            Gabriella <span className="italic text-navy-300">Coelho</span>
+          <span className="font-serif text-xl font-semibold tracking-wide text-ink-900 dark:text-white sm:text-2xl">
+            Gabriella <span className="italic text-navy-700 dark:text-navy-300">Coelho</span>
           </span>
         </Link>
 
@@ -60,7 +60,7 @@ export function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="relative text-sm font-medium text-ink-200 transition-colors duration-300 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy-300 after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-navy-300 after:transition-all after:duration-300 hover:after:w-full"
+                className="relative text-sm font-medium text-ink-600 transition-colors duration-300 hover:text-ink-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy-800 after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-navy-800 after:transition-all after:duration-300 hover:after:w-full dark:text-ink-200 dark:hover:text-white dark:focus-visible:outline-navy-300 dark:after:bg-navy-300"
               >
                 {link.label}
               </a>
@@ -72,7 +72,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={toggleTheme}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-ink-200 transition-colors duration-300 hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-300"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-ink-600 transition-colors duration-300 hover:bg-ink-900/5 hover:text-ink-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-800 dark:text-ink-200 dark:hover:bg-white/10 dark:hover:text-white dark:focus-visible:outline-navy-300"
             aria-label={
               theme === "dark" ? "Ativar tema claro" : "Ativar tema escuro"
             }
@@ -88,7 +88,7 @@ export function Navbar() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center rounded-sm border border-navy-300/50 px-5 py-2.5 text-sm font-semibold text-navy-200 transition-all duration-300 hover:border-navy-300 hover:bg-navy-300 hover:text-ink-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-300 md:inline-flex"
+            className="hidden items-center rounded-sm border border-navy-800/40 px-5 py-2.5 text-sm font-semibold text-navy-800 transition-all duration-300 hover:border-navy-800 hover:bg-navy-800 hover:text-bone focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-800 dark:border-navy-300/50 dark:text-navy-200 dark:hover:border-navy-300 dark:hover:bg-navy-300 dark:hover:text-ink-950 dark:focus-visible:outline-navy-300 md:inline-flex"
           >
             Falar com a advogada
           </a>
@@ -96,7 +96,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMenuOpen((open) => !open)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors duration-300 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-300 lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-ink-800 transition-colors duration-300 hover:bg-ink-900/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-800 dark:text-white dark:hover:bg-white/10 dark:focus-visible:outline-navy-300 lg:hidden"
             aria-expanded={menuOpen}
             aria-controls="menu-mobile"
             aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
@@ -118,7 +118,7 @@ export function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-t border-white/10 bg-ink-950/95 backdrop-blur-xl lg:hidden"
+            className="overflow-hidden border-t border-ink-200 bg-bone/95 backdrop-blur-xl dark:border-white/10 dark:bg-ink-950/95 lg:hidden"
           >
             <ul className="space-y-1 px-4 py-6 sm:px-6">
               {NAV_LINKS.map((link, index) => (
@@ -131,7 +131,7 @@ export function Navbar() {
                   <a
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="block rounded-sm px-3 py-3 font-serif text-xl text-ink-100 transition-colors duration-300 hover:bg-white/5 hover:text-navy-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-navy-300"
+                    className="block rounded-sm px-3 py-3 font-serif text-xl text-ink-800 transition-colors duration-300 hover:bg-ink-900/5 hover:text-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-navy-800 dark:text-ink-100 dark:hover:bg-white/5 dark:hover:text-navy-300 dark:focus-visible:outline-navy-300"
                   >
                     {link.label}
                   </a>
@@ -143,7 +143,7 @@ export function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMenuOpen(false)}
-                  className="block rounded-sm bg-navy-300 px-5 py-3.5 text-center text-sm font-semibold text-ink-950 transition-colors duration-300 hover:bg-navy-200"
+                  className="block rounded-sm bg-navy-800 px-5 py-3.5 text-center text-sm font-semibold text-bone transition-colors duration-300 hover:bg-navy-700 dark:bg-navy-300 dark:text-ink-950 dark:hover:bg-navy-200"
                 >
                   Falar com a advogada
                 </a>
