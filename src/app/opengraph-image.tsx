@@ -46,7 +46,7 @@ export default function OpenGraphImage() {
             maxWidth: "900px",
           }}
         >
-          Castro & Almeida
+          Gabriella Coelho
         </div>
         <div
           style={{
@@ -55,7 +55,7 @@ export default function OpenGraphImage() {
             color: "#C49A47",
           }}
         >
-          Advocacia
+          Advogada
         </div>
         <div
           style={{

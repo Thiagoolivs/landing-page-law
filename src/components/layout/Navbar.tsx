@@ -51,7 +51,7 @@ export function Navbar() {
             aria-hidden="true"
           />
           <span className="font-serif text-lg font-semibold tracking-wide text-white sm:text-xl">
-            Castro <span className="text-gold-500">&amp;</span> Almeida
+            Gabriella <span className="text-gold-500">Coelho</span>
           </span>
         </Link>
 
@@ -90,7 +90,7 @@ export function Navbar() {
             rel="noopener noreferrer"
             className="hidden items-center rounded-sm border border-gold-500/60 px-5 py-2.5 text-sm font-semibold text-gold-400 transition-all duration-300 hover:border-gold-500 hover:bg-gold-500 hover:text-ink-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500 md:inline-flex"
           >
-            Falar com um advogado
+            Falar com a advogada
           </a>
 
           <button
@@ -145,7 +145,7 @@ export function Navbar() {
                   onClick={() => setMenuOpen(false)}
                   className="block rounded-sm bg-gold-500 px-5 py-3.5 text-center text-sm font-semibold text-ink-950 transition-colors duration-300 hover:bg-gold-400"
                 >
-                  Falar com um advogado
+                  Falar com a advogada
                 </a>
               </li>
             </ul>

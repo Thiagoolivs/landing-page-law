@@ -19,7 +19,7 @@ export function Faq() {
       <div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Perguntas Frequentes"
-          title="Dúvidas comuns antes de contratar um advogado"
+          title="Dúvidas comuns antes de contratar uma advogada"
           description="Se a sua pergunta não estiver aqui, fale diretamente com a nossa equipe — respondemos em até 24 horas úteis."
         />
 
@@ -84,7 +84,7 @@ export function Faq() {
               rel="noopener noreferrer"
               className="font-semibold text-gold-600 underline-offset-4 transition-colors duration-300 hover:underline dark:text-gold-400"
             >
-              Pergunte a um advogado agora
+              Pergunte à advogada agora
             </a>
             .
           </p>

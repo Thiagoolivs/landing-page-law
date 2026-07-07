@@ -77,7 +77,7 @@ export function Hero() {
           >
             Há mais de 15 anos, unimos rigor técnico e atendimento próximo para
             transformar problemas jurídicos em soluções concretas. Seu caso
-            analisado por um advogado especializado — com sigilo absoluto e
+            analisado pessoalmente pela advogada — com sigilo absoluto e
             resposta em até 24 horas.
           </motion.p>
 
@@ -93,7 +93,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-2 rounded-sm bg-gold-500 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-ink-950 transition-all duration-300 hover:bg-gold-400 hover:shadow-xl hover:shadow-gold-500/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-500 active:scale-[0.98]"
             >
-              Falar com um advogado
+              Falar com a advogada
               <ArrowRight
                 className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
                 aria-hidden="true"

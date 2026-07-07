@@ -1,6 +1,6 @@
-# Castro & Almeida Advocacia — Landing Page
+# Advogada Gabriella Coelho — Landing Page
 
-Landing page premium para escritório de advocacia, construída com foco em **conversão, autoridade, SEO técnico e performance**.
+Landing page premium para advogada, construída com foco em **conversão, autoridade, SEO técnico e performance**.
 
 ## Stack
 
@@ -42,7 +42,7 @@ src/
 
 ## Personalização
 
-Todo o conteúdo (nome do escritório, telefone/WhatsApp, endereço, áreas de atuação, depoimentos, FAQ, estatísticas) está centralizado em `src/lib/constants.ts`.
+Todo o conteúdo (nome da advogada, telefone/WhatsApp, endereço, áreas de atuação, depoimentos, FAQ, estatísticas) está centralizado em `src/lib/constants.ts`.
 
 ## CI/CD
 

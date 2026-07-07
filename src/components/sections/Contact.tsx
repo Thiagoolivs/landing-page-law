@@ -111,7 +111,7 @@ export function Contact() {
             <SectionHeading
               eyebrow="Contato"
               title="Conte-nos o seu caso. A análise é sem compromisso."
-              description="Preencha o formulário e um advogado especializado entrará em contato em até 24 horas úteis. Suas informações são protegidas por sigilo profissional."
+              description="Preencha o formulário e a advogada entrará em contato pessoalmente em até 24 horas úteis. Suas informações são protegidas por sigilo profissional."
               align="left"
             />
             <Reveal delay={0.15}>
