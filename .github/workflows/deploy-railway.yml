@@ -16,11 +16,8 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     # Só roda em push manual, ou quando o workflow de CI terminou com sucesso na main.
-    if: >
-      ${{
-        secrets.RAILWAY_TOKEN != '' &&
-        (github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success')
-      }}
+    # A checagem do secret RAILWAY_TOKEN fica no step (job-level "if:" não tem acesso a "secrets").
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,6 +29,10 @@ jobs:
 
       - name: Deploy to Railway
         run: |
+          if [ -z "$RAILWAY_TOKEN" ]; then
+            echo "RAILWAY_TOKEN não configurado — pulando deploy."
+            exit 0
+          fi
           if [ -n "$RAILWAY_SERVICE" ]; then
             railway up --service "$RAILWAY_SERVICE" --detach
           else
