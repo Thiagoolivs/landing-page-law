@@ -43,3 +43,23 @@ src/
 ## Personalização
 
 Todo o conteúdo (nome do escritório, telefone/WhatsApp, endereço, áreas de atuação, depoimentos, FAQ, estatísticas) está centralizado em `src/lib/constants.ts`.
+
+## CI/CD
+
+### CI (`.github/workflows/ci.yml`)
+
+Roda em toda PR e push para `main`: instala dependências, `lint`, `typecheck` (`tsc --noEmit`) e `build`. Nada é implantado se o build quebrar.
+
+### CD (`.github/workflows/deploy-railway.yml`)
+
+Implanta automaticamente no [Railway](https://railway.app) assim que o CI terminar com sucesso na `main` (via `workflow_run`), ou manualmente pela aba **Actions** (`workflow_dispatch`).
+
+Para ativar:
+
+1. Crie um projeto no Railway e conecte-o (ou gere um **Project Token** em Project Settings → Tokens).
+2. No GitHub, em **Settings → Secrets and variables → Actions**, adicione:
+   - Secret `RAILWAY_TOKEN` — o token do projeto/serviço no Railway.
+   - Variable `RAILWAY_SERVICE_NAME` (opcional) — necessária apenas se o projeto tiver mais de um serviço.
+3. Sem o secret `RAILWAY_TOKEN` configurado, o job de deploy é pulado automaticamente (o CI continua funcionando normalmente).
+
+O arquivo `railway.json` define o build (Nixpacks, detecta Next.js automaticamente) e o comando de start (`npm run start`, respeitando a variável `PORT` do Railway).

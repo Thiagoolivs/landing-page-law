@@ -1,0 +1,42 @@
+name: Deploy to Railway
+
+on:
+  workflow_run:
+    workflows: ["CI"]
+    branches: [main]
+    types: [completed]
+  workflow_dispatch: {}
+
+concurrency:
+  group: deploy-railway-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    # Só roda em push manual, ou quando o workflow de CI terminou com sucesso na main.
+    if: >
+      ${{
+        secrets.RAILWAY_TOKEN != '' &&
+        (github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success')
+      }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Install Railway CLI
+        run: npm install -g @railway/cli
+
+      - name: Deploy to Railway
+        run: |
+          if [ -n "$RAILWAY_SERVICE" ]; then
+            railway up --service "$RAILWAY_SERVICE" --detach
+          else
+            railway up --detach
+          fi
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+          RAILWAY_SERVICE: ${{ vars.RAILWAY_SERVICE_NAME }}
