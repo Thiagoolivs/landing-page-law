@@ -27,11 +27,11 @@ export function Footer() {
           <div>
             <a
               href="#inicio"
-              className="inline-flex items-center gap-2.5 rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-500"
+              className="inline-flex items-center gap-2.5 rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy-300"
             >
-              <Scale className="h-7 w-7 text-gold-500" aria-hidden="true" />
+              <Scale className="h-7 w-7 text-navy-300" aria-hidden="true" />
               <span className="font-serif text-xl font-semibold text-white">
-                Gabriella <span className="text-gold-500">Coelho</span>
+                Gabriella <span className="italic text-navy-300">Coelho</span>
               </span>
             </a>
             <p className="mt-5 text-sm leading-relaxed text-ink-400">
@@ -48,7 +48,7 @@ export function Footer() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-700 text-ink-400 transition-all duration-300 hover:border-gold-500 hover:text-gold-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-700 text-ink-400 transition-all duration-300 hover:border-navy-300 hover:text-navy-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-300"
                     aria-label={`${SITE.shortName} no ${label}`}
                   >
                     <Icon className="h-4 w-4" aria-hidden="true" />
@@ -68,7 +68,7 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-ink-400 transition-colors duration-300 hover:text-gold-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500"
+                    className="text-sm text-ink-400 transition-colors duration-300 hover:text-navy-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-300"
                   >
                     {link.label}
                   </a>
@@ -85,7 +85,7 @@ export function Footer() {
             <ul className="mt-5 space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin
-                  className="mt-0.5 h-4 w-4 shrink-0 text-gold-500"
+                  className="mt-0.5 h-4 w-4 shrink-0 text-navy-300"
                   aria-hidden="true"
                 />
                 <address className="not-italic leading-relaxed text-ink-400">
@@ -100,18 +100,18 @@ export function Footer() {
               <li>
                 <a
                   href={`tel:${SITE.phoneRaw}`}
-                  className="flex items-center gap-3 text-ink-400 transition-colors duration-300 hover:text-gold-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500"
+                  className="flex items-center gap-3 text-ink-400 transition-colors duration-300 hover:text-navy-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-300"
                 >
-                  <Phone className="h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
+                  <Phone className="h-4 w-4 shrink-0 text-navy-300" aria-hidden="true" />
                   {SITE.phone}
                 </a>
               </li>
               <li>
                 <a
                   href={`mailto:${SITE.email}`}
-                  className="flex items-center gap-3 text-ink-400 transition-colors duration-300 hover:text-gold-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500"
+                  className="flex items-center gap-3 text-ink-400 transition-colors duration-300 hover:text-navy-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-300"
                 >
-                  <Mail className="h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
+                  <Mail className="h-4 w-4 shrink-0 text-navy-300" aria-hidden="true" />
                   {SITE.email}
                 </a>
               </li>
@@ -127,7 +127,7 @@ export function Footer() {
               {SITE.hours.map((slot) => (
                 <li key={slot.days} className="flex items-start gap-3">
                   <Clock
-                    className="mt-0.5 h-4 w-4 shrink-0 text-gold-500"
+                    className="mt-0.5 h-4 w-4 shrink-0 text-navy-300"
                     aria-hidden="true"
                   />
                   <span className="text-ink-400">
@@ -143,7 +143,7 @@ export function Footer() {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center rounded-sm border border-gold-500/60 px-5 py-2.5 text-sm font-semibold text-gold-400 transition-all duration-300 hover:bg-gold-500 hover:text-ink-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500"
+              className="mt-6 inline-flex items-center rounded-sm border border-navy-300/50 px-5 py-2.5 text-sm font-semibold text-navy-200 transition-all duration-300 hover:border-navy-300 hover:bg-navy-300 hover:text-ink-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-300"
             >
               Atendimento imediato
             </a>

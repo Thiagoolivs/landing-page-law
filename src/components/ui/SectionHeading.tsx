@@ -10,7 +10,7 @@ interface SectionHeadingProps {
   as?: "h2" | "h3";
 }
 
-/** Cabeçalho padrão das seções: eyebrow dourado, título serifado e descrição. */
+/** Cabeçalho padrão das seções: eyebrow em azul, título serifado e descrição. */
 export function SectionHeading({
   eyebrow,
   title,
@@ -28,20 +28,33 @@ export function SectionHeading({
     >
       <p
         className={cn(
-          "mb-4 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-gold-500",
+          "mb-4 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em]",
+          dark ? "text-navy-300" : "text-navy-800 dark:text-navy-300",
           align === "center" && "justify-center"
         )}
       >
-        <span className="h-px w-8 bg-gold-500/70" aria-hidden="true" />
+        <span
+          className={cn(
+            "h-px w-8",
+            dark ? "bg-navy-300/60" : "bg-navy-800/50 dark:bg-navy-300/60"
+          )}
+          aria-hidden="true"
+        />
         {eyebrow}
         {align === "center" && (
-          <span className="h-px w-8 bg-gold-500/70" aria-hidden="true" />
+          <span
+            className={cn(
+              "h-px w-8",
+              dark ? "bg-navy-300/60" : "bg-navy-800/50 dark:bg-navy-300/60"
+            )}
+            aria-hidden="true"
+          />
         )}
       </p>
       <Tag
         className={cn(
-          "font-serif text-3xl font-medium leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]",
-          dark ? "text-white" : "text-ink-950 dark:text-white"
+          "font-serif text-4xl font-medium leading-[1.1] tracking-tight sm:text-5xl lg:text-[3.25rem]",
+          dark ? "text-white" : "text-ink-900 dark:text-white"
         )}
       >
         {title}

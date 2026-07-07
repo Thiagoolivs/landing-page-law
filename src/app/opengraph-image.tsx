@@ -16,9 +16,9 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          backgroundColor: "#0B0B0D",
+          backgroundColor: "#0C0D12",
           backgroundImage:
-            "radial-gradient(ellipse 80% 60% at 75% 20%, rgba(196,154,71,0.18), transparent 60%)",
+            "radial-gradient(ellipse 80% 60% at 75% 20%, rgba(144,163,193,0.20), transparent 60%)",
           color: "#FFFFFF",
           fontFamily: "Georgia, serif",
         }}
@@ -28,13 +28,13 @@ export default function OpenGraphImage() {
             display: "flex",
             alignItems: "center",
             gap: "16px",
-            color: "#C49A47",
+            color: "#90A3C1",
             fontSize: "26px",
             letterSpacing: "8px",
             textTransform: "uppercase",
           }}
         >
-          <div style={{ width: "56px", height: "2px", backgroundColor: "#C49A47" }} />
+          <div style={{ width: "56px", height: "2px", backgroundColor: "#90A3C1" }} />
           Advocacia Estratégica
         </div>
         <div
@@ -52,7 +52,7 @@ export default function OpenGraphImage() {
           style={{
             marginTop: "8px",
             fontSize: "40px",
-            color: "#C49A47",
+            color: "#90A3C1",
           }}
         >
           Advogada

@@ -11,7 +11,7 @@ export function Stars() {
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
-          className="h-4 w-4 fill-gold-500 text-gold-500"
+          className="h-4 w-4 fill-navy-700 text-navy-700 dark:fill-navy-300 dark:text-navy-300"
           aria-hidden="true"
         />
       ))}

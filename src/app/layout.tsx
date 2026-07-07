@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Cormorant, Inter } from "next/font/google";
 import Script from "next/script";
 import { SITE } from "@/lib/constants";
 import { buildJsonLd } from "@/lib/schema";
@@ -11,10 +11,12 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const playfair = Playfair_Display({
+// Serifada de alto contraste e traço delicado — a "elegância inexplicável"
+const cormorant = Cormorant({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-playfair",
+  weight: ["400", "500", "600"],
+  variable: "--font-cormorant",
 });
 
 export const metadata: Metadata = {
@@ -74,8 +76,8 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#FFFFFF" },
-    { media: "(prefers-color-scheme: dark)", color: "#0B0B0D" },
+    { media: "(prefers-color-scheme: light)", color: "#F4F3F0" },
+    { media: "(prefers-color-scheme: dark)", color: "#0C0D12" },
   ],
 };
 
@@ -88,7 +90,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${inter.variable} ${playfair.variable}`}
+      className={`${inter.variable} ${cormorant.variable}`}
       suppressHydrationWarning
     >
       <body className="font-sans">
@@ -101,7 +103,7 @@ export default function RootLayout({
         />
         <a
           href="#conteudo"
-          className="sr-only z-[60] rounded-sm bg-gold-500 px-6 py-3 text-sm font-semibold text-ink-950 focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+          className="sr-only z-[60] rounded-sm bg-navy-800 px-6 py-3 text-sm font-semibold text-bone focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
         >
           Pular para o conteúdo
         </a>

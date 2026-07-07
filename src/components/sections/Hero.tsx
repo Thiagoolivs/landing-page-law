@@ -23,26 +23,17 @@ export function Hero() {
       className="relative flex min-h-screen items-center overflow-hidden bg-ink-950"
       aria-label="Apresentação do escritório"
     >
-      {/* Fundo: gradientes e grid discretos com parallax leve */}
+      {/* Fundo: um único brilho azul-luar e uma balança em traço fino (parallax leve) */}
       <motion.div
         style={{ y: parallaxY }}
         className="pointer-events-none absolute inset-0"
         aria-hidden="true"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_20%,rgba(196,154,71,0.13),transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_15%_85%,rgba(196,154,71,0.07),transparent_55%)]" />
-        <div
-          className="absolute inset-0 opacity-[0.35]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)",
-            backgroundSize: "72px 72px",
-          }}
-        />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_75%_55%_at_72%_18%,rgba(144,163,193,0.12),transparent_62%)]" />
         {/* Balança monumental em traço fino */}
         <Scale
-          className="absolute -right-24 top-1/2 hidden h-[36rem] w-[36rem] -translate-y-1/2 text-white/[0.03] lg:block"
-          strokeWidth={0.5}
+          className="absolute -right-28 top-1/2 hidden h-[38rem] w-[38rem] -translate-y-1/2 text-white/[0.02] lg:block"
+          strokeWidth={0.4}
         />
       </motion.div>
 
@@ -52,9 +43,9 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: EASE }}
-            className="mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-gold-400"
+            className="mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-navy-300"
           >
-            <span className="h-px w-10 bg-gold-500" aria-hidden="true" />
+            <span className="h-px w-10 bg-navy-300/80" aria-hidden="true" />
             Advocacia estratégica desde {SITE.foundingYear}
           </motion.p>
 
@@ -62,11 +53,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
-            className="font-serif text-4xl font-medium leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-6xl"
+            className="font-serif text-5xl font-medium leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-[4.5rem]"
           >
             Defendemos seus direitos com{" "}
-            <span className="text-gold-400">estratégia</span>, experiência e
-            compromisso.
+            <span className="italic text-navy-200">estratégia</span>,
+            experiência e compromisso.
           </motion.h1>
 
           <motion.p
@@ -91,7 +82,7 @@ export function Hero() {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-2 rounded-sm bg-gold-500 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-ink-950 transition-all duration-300 hover:bg-gold-400 hover:shadow-xl hover:shadow-gold-500/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-500 active:scale-[0.98]"
+              className="group inline-flex items-center justify-center gap-2 rounded-sm bg-navy-300 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-ink-950 transition-all duration-300 hover:bg-navy-200 hover:shadow-xl hover:shadow-navy-300/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy-300 active:scale-[0.98]"
             >
               Falar com a advogada
               <ArrowRight
@@ -101,7 +92,7 @@ export function Hero() {
             </a>
             <a
               href="#contato"
-              className="inline-flex items-center justify-center rounded-sm border border-white/25 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:border-gold-500/70 hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-500 active:scale-[0.98]"
+              className="inline-flex items-center justify-center rounded-sm border border-white/25 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:border-navy-300/70 hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy-300 active:scale-[0.98]"
             >
               Solicitar atendimento
             </a>
@@ -120,7 +111,7 @@ export function Hero() {
                 className="flex items-center gap-2.5 text-sm text-ink-200"
               >
                 <CheckCircle2
-                  className="h-4 w-4 shrink-0 text-gold-500"
+                  className="h-4 w-4 shrink-0 text-navy-300"
                   aria-hidden="true"
                 />
                 {badge}
@@ -142,7 +133,7 @@ export function Hero() {
           <motion.div
             animate={reduceMotion ? undefined : { y: [0, 12, 0] }}
             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-            className="h-2 w-1 rounded-full bg-gold-500"
+            className="h-2 w-1 rounded-full bg-navy-300"
           />
         </div>
       </motion.div>

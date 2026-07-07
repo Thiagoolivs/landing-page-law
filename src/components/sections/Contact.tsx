@@ -47,10 +47,10 @@ function validate(form: FormData): FormErrors {
 
 const inputClasses = (hasError: boolean) =>
   cn(
-    "w-full rounded-sm border bg-white px-4 py-3.5 text-sm text-ink-950 shadow-sm outline-none transition-all duration-300 placeholder:text-ink-400 focus:ring-2 dark:bg-ink-900 dark:text-white dark:placeholder:text-ink-500",
+    "w-full rounded-sm border bg-bone-100 px-4 py-3.5 text-sm text-ink-900 shadow-sm outline-none transition-all duration-300 placeholder:text-ink-400 focus:ring-2 dark:bg-ink-900 dark:text-white dark:placeholder:text-ink-500",
     hasError
       ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
-      : "border-ink-200 focus:border-gold-500 focus:ring-gold-500/20 dark:border-ink-700"
+      : "border-ink-300 focus:border-navy-800 focus:ring-navy-800/15 dark:border-ink-700 dark:focus:border-navy-300 dark:focus:ring-navy-300/20"
   );
 
 export function Contact() {
@@ -102,7 +102,7 @@ export function Contact() {
   return (
     <section
       id="contato"
-      className="bg-ink-50 py-24 dark:bg-ink-950 lg:py-32"
+      className="bg-bone-300 py-24 dark:bg-ink-950 lg:py-32"
       aria-labelledby="contato-titulo"
     >
       <div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
@@ -117,15 +117,15 @@ export function Contact() {
             <Reveal delay={0.15}>
               <ul className="mt-10 space-y-4 text-sm text-ink-600 dark:text-ink-300">
                 <li className="flex items-center gap-3">
-                  <CheckCircle2 className="h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
+                  <CheckCircle2 className="h-4 w-4 shrink-0 text-navy-800 dark:text-navy-300" aria-hidden="true" />
                   Resposta garantida em até 24 horas úteis
                 </li>
                 <li className="flex items-center gap-3">
-                  <CheckCircle2 className="h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
+                  <CheckCircle2 className="h-4 w-4 shrink-0 text-navy-800 dark:text-navy-300" aria-hidden="true" />
                   Análise inicial do caso sem custo
                 </li>
                 <li className="flex items-center gap-3">
-                  <Lock className="h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
+                  <Lock className="h-4 w-4 shrink-0 text-navy-800 dark:text-navy-300" aria-hidden="true" />
                   Sigilo absoluto garantido por lei
                 </li>
               </ul>
@@ -136,7 +136,7 @@ export function Contact() {
             <form
               onSubmit={handleSubmit}
               noValidate
-              className="rounded-md border border-ink-100 bg-white p-7 shadow-xl shadow-ink-950/5 dark:border-ink-800 dark:bg-ink-900 sm:p-10"
+              className="rounded-md border border-ink-200/60 bg-bone-100 p-7 shadow-xl shadow-ink-950/5 dark:border-ink-800 dark:bg-ink-900 sm:p-10"
               aria-describedby="form-observacao"
             >
               {status === "sent" && (
@@ -159,7 +159,7 @@ export function Contact() {
                     htmlFor="campo-name"
                     className="mb-2 block text-sm font-medium text-ink-800 dark:text-ink-100"
                   >
-                    Nome completo <span className="text-gold-600" aria-hidden="true">*</span>
+                    Nome completo <span className="text-navy-800 dark:text-navy-300" aria-hidden="true">*</span>
                   </label>
                   <input
                     id="campo-name"
@@ -186,7 +186,7 @@ export function Contact() {
                     htmlFor="campo-phone"
                     className="mb-2 block text-sm font-medium text-ink-800 dark:text-ink-100"
                   >
-                    Telefone / WhatsApp <span className="text-gold-600" aria-hidden="true">*</span>
+                    Telefone / WhatsApp <span className="text-navy-800 dark:text-navy-300" aria-hidden="true">*</span>
                   </label>
                   <input
                     id="campo-phone"
@@ -214,7 +214,7 @@ export function Contact() {
                     htmlFor="campo-email"
                     className="mb-2 block text-sm font-medium text-ink-800 dark:text-ink-100"
                   >
-                    E-mail <span className="text-gold-600" aria-hidden="true">*</span>
+                    E-mail <span className="text-navy-800 dark:text-navy-300" aria-hidden="true">*</span>
                   </label>
                   <input
                     id="campo-email"
@@ -241,7 +241,7 @@ export function Contact() {
                     htmlFor="campo-area"
                     className="mb-2 block text-sm font-medium text-ink-800 dark:text-ink-100"
                   >
-                    Área do caso <span className="text-gold-600" aria-hidden="true">*</span>
+                    Área do caso <span className="text-navy-800 dark:text-navy-300" aria-hidden="true">*</span>
                   </label>
                   <select
                     id="campo-area"
@@ -277,7 +277,7 @@ export function Contact() {
                     htmlFor="campo-message"
                     className="mb-2 block text-sm font-medium text-ink-800 dark:text-ink-100"
                   >
-                    Descreva brevemente o seu caso <span className="text-gold-600" aria-hidden="true">*</span>
+                    Descreva brevemente o seu caso <span className="text-navy-800 dark:text-navy-300" aria-hidden="true">*</span>
                   </label>
                   <textarea
                     id="campo-message"
@@ -302,7 +302,7 @@ export function Contact() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="group mt-8 inline-flex w-full items-center justify-center gap-2 rounded-sm bg-ink-950 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-gold-500 hover:text-ink-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-500 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-70 dark:bg-gold-500 dark:text-ink-950 dark:hover:bg-gold-400 sm:w-auto"
+                className="group mt-8 inline-flex w-full items-center justify-center gap-2 rounded-sm bg-navy-800 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-bone transition-all duration-300 hover:bg-navy-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy-800 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-70 dark:bg-navy-300 dark:text-ink-950 dark:hover:bg-navy-200 dark:focus-visible:outline-navy-300 sm:w-auto"
               >
                 {status === "sending" ? (
                   <>

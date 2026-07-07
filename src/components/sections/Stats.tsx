@@ -5,11 +5,11 @@ import { STATS } from "@/lib/constants";
 export function Stats() {
   return (
     <section
-      className="relative overflow-hidden border-y border-gold-500/20 bg-ink-950 py-20 lg:py-24"
+      className="relative overflow-hidden border-y border-navy-300/15 bg-ink-950 py-20 lg:py-24"
       aria-label="Resultados do escritório em números"
     >
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_50%,rgba(196,154,71,0.08),transparent_70%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_50%,rgba(144,163,193,0.08),transparent_70%)]"
         aria-hidden="true"
       />
       <div className="relative mx-auto max-w-container px-4 sm:px-6 lg:px-8">
