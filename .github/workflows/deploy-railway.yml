@@ -16,11 +16,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     # Só roda em push manual, ou quando o workflow de CI terminou com sucesso na main.
-    if: >
-      ${{
-        secrets.RAILWAY_TOKEN != '' &&
-        (github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success')
-      }}
+    if: secrets.RAILWAY_TOKEN != '' && (github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success')
     steps:
       - name: Checkout
         uses: actions/checkout@v4
