@@ -17,13 +17,13 @@ export function PracticeAreas() {
         <SectionHeading
           eyebrow="Áreas de Atuação"
           title="Especialistas em cada frente do Direito"
-          description="Uma equipe multidisciplinar para atender pessoas e empresas com profundidade técnica em cada área."
+          description="Atendimento direto e especializado para pessoas e empresas, com profundidade técnica em cada área."
         />
 
         <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {PRACTICE_AREAS.map((area, index) => {
             const whatsappAreaLink = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
-              `Olá! Gostaria de falar com um advogado sobre ${area.title}.`
+              `Olá! Gostaria de falar com a advogada sobre ${area.title}.`
             )}`;
             return (
               <Reveal key={area.title} delay={(index % 4) * 0.08}>
@@ -34,7 +34,7 @@ export function PracticeAreas() {
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                   className="group relative flex h-full flex-col rounded-md border border-ink-100 bg-white p-7 shadow-sm transition-all duration-300 hover:border-gold-500/50 hover:shadow-xl hover:shadow-ink-950/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500 dark:border-ink-800 dark:bg-ink-900 dark:hover:border-gold-500/40"
-                  aria-label={`${area.title}: falar com um advogado desta área`}
+                  aria-label={`${area.title}: falar com a advogada sobre esta área`}
                 >
                   <span
                     className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-gold-500 transition-transform duration-500 group-hover:scale-x-100"

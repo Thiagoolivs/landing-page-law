@@ -31,7 +31,7 @@ export function Footer() {
             >
               <Scale className="h-7 w-7 text-gold-500" aria-hidden="true" />
               <span className="font-serif text-xl font-semibold text-white">
-                Castro <span className="text-gold-500">&amp;</span> Almeida
+                Gabriella <span className="text-gold-500">Coelho</span>
               </span>
             </a>
             <p className="mt-5 text-sm leading-relaxed text-ink-400">

@@ -81,10 +81,10 @@ export function About() {
             <Reveal delay={0.15}>
               <div className="mt-6 space-y-5 text-base leading-relaxed text-ink-600 dark:text-ink-300">
                 <p>
-                  O {SITE.name} nasceu em {SITE.foundingYear} com uma convicção
-                  simples: por trás de cada processo existe uma pessoa, uma
-                  família ou uma empresa que precisa de respostas — não de
-                  juridiquês.
+                  {SITE.name} iniciou sua trajetória em {SITE.foundingYear} com
+                  uma convicção simples: por trás de cada processo existe uma
+                  pessoa, uma família ou uma empresa que precisa de respostas —
+                  não de juridiquês.
                 </p>
                 <p>
                   Ao longo de mais de uma década e meia, conduzimos milhares de

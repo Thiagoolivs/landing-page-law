@@ -36,7 +36,7 @@ export function FinalCta() {
         <Reveal delay={0.2}>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-ink-300 sm:text-lg">
             Muitas ações têm prazo para serem propostas — e provas se perdem
-            com o tempo. Converse agora com um advogado especializado, entenda
+            com o tempo. Converse agora com a advogada, entenda
             os seus direitos e decida com segurança. A análise do seu caso não
             custa nada.
           </p>
@@ -50,7 +50,7 @@ export function FinalCta() {
               rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-2 rounded-sm bg-gold-500 px-10 py-5 text-base font-semibold uppercase tracking-wider text-ink-950 shadow-2xl shadow-gold-500/20 transition-all duration-300 hover:bg-gold-400 hover:shadow-gold-500/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-500 active:scale-[0.98]"
             >
-              Falar com um advogado agora
+              Falar com a advogada agora
               <ArrowRight
                 className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
                 aria-hidden="true"

@@ -22,17 +22,17 @@ import {
 /* ------------------------------------------------------------------ */
 
 export const SITE = {
-  name: "Castro & Almeida Advocacia",
-  shortName: "Castro & Almeida",
-  legalName: "Castro & Almeida Sociedade de Advogados",
+  name: "Advogada Gabriella Coelho",
+  shortName: "Gabriella Coelho",
+  legalName: "Advogada Gabriella Coelho",
   description:
-    "Escritório de advocacia full service com mais de 15 anos de atuação estratégica. Atendimento personalizado, sigilo absoluto e advogados especializados em todas as áreas do Direito.",
-  url: "https://www.castroealmeida.adv.br",
+    "Advocacia full service com mais de 15 anos de atuação estratégica. Atendimento personalizado, sigilo absoluto e atuação especializada em todas as áreas do Direito.",
+  url: "https://www.gabriellacoelho.adv.br",
   phone: "+55 11 4000-0000",
   phoneRaw: "+551140000000",
   whatsapp: "5511940000000",
   whatsappDisplay: "(11) 94000-0000",
-  email: "contato@castroealmeida.adv.br",
+  email: "contato@gabriellacoelho.adv.br",
   address: {
     street: "Av. Brigadeiro Faria Lima, 4509 — 12º andar",
     district: "Itaim Bibi",
@@ -49,17 +49,17 @@ export const SITE = {
     { days: "Segunda a Sexta", time: "08h às 19h" },
     { days: "Sábado", time: "09h às 13h" },
   ],
-  oab: "OAB/SP 00.000",
+  oab: "OAB/SP 000.000",
   foundingYear: 2009,
   social: {
-    instagram: "https://instagram.com/castroealmeida.adv",
-    linkedin: "https://linkedin.com/company/castro-almeida-advocacia",
-    facebook: "https://facebook.com/castroealmeida.adv",
+    instagram: "https://instagram.com/gabriellacoelho.adv",
+    linkedin: "https://linkedin.com/in/gabriella-coelho-adv",
+    facebook: "https://facebook.com/gabriellacoelho.adv",
   },
 } as const;
 
 export const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Olá! Visitei o site do escritório e gostaria de falar com um advogado sobre o meu caso."
+  "Olá! Visitei o site e gostaria de falar com a advogada sobre o meu caso."
 );
 
 export const WHATSAPP_LINK = `https://wa.me/${SITE.whatsapp}?text=${WHATSAPP_MESSAGE}`;
@@ -90,7 +90,7 @@ export const NAV_LINKS: NavLink[] = [
 export const TRUST_BADGES = [
   "Atendimento Personalizado",
   "Resposta Rápida",
-  "Advogados Especializados",
+  "Advogada Especializada",
   "Sigilo Absoluto",
 ] as const;
 
@@ -170,7 +170,7 @@ export const DIFFERENTIALS: Differential[] = [
     icon: Users,
     title: "Atendimento humanizado",
     description:
-      "Você é atendido por advogados, não por scripts. Cada caso recebe a atenção que merece, do início ao fim.",
+      "Você é atendido diretamente pela advogada, não por scripts. Cada caso recebe a atenção que merece, do início ao fim.",
   },
   {
     icon: Eye,
@@ -225,7 +225,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     step: 2,
     title: "Análise do caso",
     description:
-      "Um advogado especializado avalia a viabilidade jurídica e os documentos, com total sigilo.",
+      "A advogada avalia pessoalmente a viabilidade jurídica e os documentos, com total sigilo.",
   },
   {
     step: 3,
@@ -333,7 +333,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Como funciona o atendimento pelo WhatsApp?",
     answer:
-      "Você envia uma mensagem descrevendo brevemente o seu caso e nossa equipe responde em até 24 horas úteis. Se necessário, agendamos uma reunião presencial ou por videoconferência com o advogado especializado na sua área.",
+      "Você envia uma mensagem descrevendo brevemente o seu caso e nossa equipe responde em até 24 horas úteis. Se necessário, agendamos uma reunião presencial ou por videoconferência diretamente com a advogada.",
   },
   {
     question: "Vocês atendem clientes de outras cidades e estados?",
@@ -353,7 +353,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Meu caso será tratado com sigilo?",
     answer:
-      "Absolutamente. O sigilo profissional é um dever ético do advogado, previsto no Estatuto da OAB. Todas as informações compartilhadas conosco são protegidas por confidencialidade absoluta.",
+      "Absolutamente. O sigilo profissional é um dever ético da advocacia, previsto no Estatuto da OAB. Todas as informações compartilhadas conosco são protegidas por confidencialidade absoluta.",
   },
   {
     question: "Preciso ir até o escritório para contratar?",
@@ -373,6 +373,6 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Como acompanho o andamento do meu processo?",
     answer:
-      "Você recebe atualizações periódicas da nossa equipe sobre cada movimentação relevante, além de poder falar diretamente com o advogado responsável sempre que precisar.",
+      "Você recebe atualizações periódicas da nossa equipe sobre cada movimentação relevante, além de poder falar diretamente com a advogada responsável sempre que precisar.",
   },
 ];
