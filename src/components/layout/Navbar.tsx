@@ -43,15 +43,15 @@ export function Navbar() {
       >
         <Link
           href="#inicio"
-          className="group flex items-center gap-2.5 rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-500"
+          className="group flex items-center gap-2.5 rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy-300"
           aria-label={`${SITE.name} — voltar ao início`}
         >
           <Scale
-            className="h-7 w-7 text-gold-500 transition-transform duration-500 group-hover:rotate-[8deg]"
+            className="h-7 w-7 text-navy-300 transition-transform duration-500 group-hover:rotate-[8deg]"
             aria-hidden="true"
           />
-          <span className="font-serif text-lg font-semibold tracking-wide text-white sm:text-xl">
-            Gabriella <span className="text-gold-500">Coelho</span>
+          <span className="font-serif text-xl font-semibold tracking-wide text-white sm:text-2xl">
+            Gabriella <span className="italic text-navy-300">Coelho</span>
           </span>
         </Link>
 
@@ -60,7 +60,7 @@ export function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="relative text-sm font-medium text-ink-200 transition-colors duration-300 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-500 after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-gold-500 after:transition-all after:duration-300 hover:after:w-full"
+                className="relative text-sm font-medium text-ink-200 transition-colors duration-300 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy-300 after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-navy-300 after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.label}
               </a>
@@ -72,7 +72,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={toggleTheme}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-ink-200 transition-colors duration-300 hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-ink-200 transition-colors duration-300 hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-300"
             aria-label={
               theme === "dark" ? "Ativar tema claro" : "Ativar tema escuro"
             }
@@ -88,7 +88,7 @@ export function Navbar() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center rounded-sm border border-gold-500/60 px-5 py-2.5 text-sm font-semibold text-gold-400 transition-all duration-300 hover:border-gold-500 hover:bg-gold-500 hover:text-ink-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500 md:inline-flex"
+            className="hidden items-center rounded-sm border border-navy-300/50 px-5 py-2.5 text-sm font-semibold text-navy-200 transition-all duration-300 hover:border-navy-300 hover:bg-navy-300 hover:text-ink-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-300 md:inline-flex"
           >
             Falar com a advogada
           </a>
@@ -96,7 +96,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMenuOpen((open) => !open)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors duration-300 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500 lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors duration-300 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-300 lg:hidden"
             aria-expanded={menuOpen}
             aria-controls="menu-mobile"
             aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
@@ -131,7 +131,7 @@ export function Navbar() {
                   <a
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="block rounded-sm px-3 py-3 font-serif text-lg text-ink-100 transition-colors duration-300 hover:bg-white/5 hover:text-gold-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-500"
+                    className="block rounded-sm px-3 py-3 font-serif text-xl text-ink-100 transition-colors duration-300 hover:bg-white/5 hover:text-navy-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-navy-300"
                   >
                     {link.label}
                   </a>
@@ -143,7 +143,7 @@ export function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMenuOpen(false)}
-                  className="block rounded-sm bg-gold-500 px-5 py-3.5 text-center text-sm font-semibold text-ink-950 transition-colors duration-300 hover:bg-gold-400"
+                  className="block rounded-sm bg-navy-300 px-5 py-3.5 text-center text-sm font-semibold text-ink-950 transition-colors duration-300 hover:bg-navy-200"
                 >
                   Falar com a advogada
                 </a>

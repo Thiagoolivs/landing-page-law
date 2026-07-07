@@ -10,7 +10,7 @@ export function PracticeAreas() {
   return (
     <section
       id="areas-de-atuacao"
-      className="bg-ink-50 py-24 dark:bg-ink-950 lg:py-32"
+      className="bg-bone-300 py-24 dark:bg-ink-950 lg:py-32"
       aria-labelledby="areas-titulo"
     >
       <div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
@@ -33,16 +33,16 @@ export function PracticeAreas() {
                   rel="noopener noreferrer"
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                  className="group relative flex h-full flex-col rounded-md border border-ink-100 bg-white p-7 shadow-sm transition-all duration-300 hover:border-gold-500/50 hover:shadow-xl hover:shadow-ink-950/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500 dark:border-ink-800 dark:bg-ink-900 dark:hover:border-gold-500/40"
+                  className="group relative flex h-full flex-col rounded-md border border-ink-200/60 bg-bone-100 p-7 shadow-sm transition-all duration-300 hover:border-navy-800/40 hover:shadow-xl hover:shadow-ink-950/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-800 dark:border-ink-800 dark:bg-ink-900 dark:hover:border-navy-300/40 dark:focus-visible:outline-navy-300"
                   aria-label={`${area.title}: falar com a advogada sobre esta área`}
                 >
                   <span
-                    className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-gold-500 transition-transform duration-500 group-hover:scale-x-100"
+                    className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-navy-800 transition-transform duration-500 group-hover:scale-x-100 dark:bg-navy-300"
                     aria-hidden="true"
                   />
-                  <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-sm bg-ink-950 transition-colors duration-300 group-hover:bg-gold-500 dark:bg-ink-800">
+                  <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-sm bg-navy-800 transition-colors duration-300 group-hover:bg-navy-700 dark:bg-ink-800 dark:group-hover:bg-navy-300">
                     <area.icon
-                      className="h-5 w-5 text-gold-400 transition-colors duration-300 group-hover:text-ink-950"
+                      className="h-5 w-5 text-navy-200 transition-colors duration-300 dark:text-navy-300 dark:group-hover:text-ink-950"
                       aria-hidden="true"
                     />
                   </span>
@@ -52,7 +52,7 @@ export function PracticeAreas() {
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-600 dark:text-ink-300">
                     {area.description}
                   </p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-gold-600 opacity-0 transition-all duration-300 group-hover:opacity-100 dark:text-gold-400">
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-navy-800 opacity-0 transition-all duration-300 group-hover:opacity-100 dark:text-navy-300">
                     Falar com especialista
                     <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
                   </span>

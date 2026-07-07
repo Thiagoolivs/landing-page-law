@@ -7,7 +7,7 @@ export function Process() {
   return (
     <section
       id="como-funciona"
-      className="bg-white py-24 dark:bg-ink-900 lg:py-32"
+      className="bg-bone-100 py-24 dark:bg-ink-900 lg:py-32"
       aria-labelledby="processo-titulo"
     >
       <div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
@@ -20,7 +20,7 @@ export function Process() {
         <ol className="relative mx-auto mt-16 max-w-3xl">
           {/* Linha vertical da timeline */}
           <span
-            className="absolute bottom-6 left-6 top-6 w-px bg-gradient-to-b from-gold-500/60 via-gold-500/30 to-transparent sm:left-1/2"
+            className="absolute bottom-6 left-6 top-6 w-px bg-gradient-to-b from-navy-800/50 via-navy-800/25 to-transparent dark:from-navy-300/50 dark:via-navy-300/25 sm:left-1/2"
             aria-hidden="true"
           />
           {PROCESS_STEPS.map((step, index) => {
@@ -41,7 +41,7 @@ export function Process() {
                 >
                   <span
                     className={cn(
-                      "absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-full border border-gold-500/50 bg-white font-serif text-lg font-semibold text-gold-600 shadow-md dark:bg-ink-950 dark:text-gold-400",
+                      "absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-full border border-navy-800/40 bg-bone-100 font-serif text-xl font-semibold text-navy-800 shadow-md dark:border-navy-300/40 dark:bg-ink-950 dark:text-navy-300",
                       isEven
                         ? "sm:left-auto sm:-right-6"
                         : "sm:-left-6"
@@ -50,7 +50,7 @@ export function Process() {
                   >
                     {step.step}
                   </span>
-                  <div className="rounded-md border border-ink-100 bg-ink-50/60 p-6 transition-colors duration-300 hover:border-gold-500/40 dark:border-ink-700 dark:bg-ink-800/60">
+                  <div className="rounded-md border border-ink-200/60 bg-bone-200/60 p-6 transition-colors duration-300 hover:border-navy-800/30 dark:border-ink-700 dark:bg-ink-800/60 dark:hover:border-navy-300/30">
                     <h3 className="font-serif text-xl font-medium text-ink-950 dark:text-white">
                       {step.title}
                     </h3>

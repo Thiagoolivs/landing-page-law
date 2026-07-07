@@ -13,7 +13,7 @@ export function Faq() {
   return (
     <section
       id="faq"
-      className="bg-white py-24 dark:bg-ink-900 lg:py-32"
+      className="bg-bone-100 py-24 dark:bg-ink-900 lg:py-32"
       aria-labelledby="faq-titulo"
     >
       <div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
@@ -35,7 +35,7 @@ export function Faq() {
                     aria-expanded={isOpen}
                     aria-controls={`faq-resposta-${index}`}
                     id={`faq-pergunta-${index}`}
-                    className="flex w-full items-center justify-between gap-6 py-6 text-left transition-colors duration-300 hover:text-gold-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500 dark:hover:text-gold-400"
+                    className="flex w-full items-center justify-between gap-6 py-6 text-left transition-colors duration-300 hover:text-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-800 dark:hover:text-navy-300 dark:focus-visible:outline-navy-300"
                   >
                     <span className="font-serif text-lg font-medium text-ink-950 dark:text-white">
                       {item.question}
@@ -82,7 +82,7 @@ export function Faq() {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-gold-600 underline-offset-4 transition-colors duration-300 hover:underline dark:text-gold-400"
+              className="font-semibold text-navy-800 underline-offset-4 transition-colors duration-300 hover:underline dark:text-navy-300"
             >
               Pergunte à advogada agora
             </a>

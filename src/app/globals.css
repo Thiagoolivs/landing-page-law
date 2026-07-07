@@ -21,16 +21,16 @@
   }
 
   body {
-    @apply bg-white text-ink-950 antialiased dark:bg-ink-950 dark:text-ink-50;
+    @apply bg-bone text-ink-900 antialiased dark:bg-ink-950 dark:text-ink-100;
     text-rendering: optimizeLegibility;
   }
 
   ::selection {
-    @apply bg-gold-500/30 text-ink-950;
+    @apply bg-navy-800/20 text-ink-900;
   }
 
   .dark ::selection {
-    @apply text-white;
+    @apply bg-navy-300/25 text-white;
   }
 
   /* Scrollbar discreta */
@@ -47,7 +47,7 @@
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-gold-500;
+    @apply bg-navy-400;
   }
 }
 
